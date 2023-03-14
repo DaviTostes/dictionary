@@ -1,0 +1,40 @@
+.wordCard {
+  margin-top: 20px;
+  width: 100%;
+}
+
+.word-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.word-wrapper h1 {
+  font-size: 58px;
+}
+
+.word-wrapper p {
+  color: rgb(113, 113, 113);
+}
+
+.meanings-wrapper {
+  width: 80%;
+  margin-top: 20px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.meanings-wrapper .meaning {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+} 
+
+.meanings {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  color: rgb(113, 113, 113);
+}

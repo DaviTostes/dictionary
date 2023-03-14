@@ -1,16 +1,24 @@
 import './App.css'
+import { useEffect, useState } from 'react'
 
 import {IoMdSend} from 'react-icons/io'
 import getWord from './utils/getWord'
-import { useState } from 'react'
+import WordCard from './components/wordCard'
 
 function App() {
   const [word, setWord] = useState('')
-  const [result, setResult] = useState({})
+  const [result, setResult] = useState({word: '', phonetic: '', meanings: []})
 
-  const getApiResult = () => {
-    getWord(word)
+  const getApiResult = async () => {
+    setResult(await getWord(word))
+    const button = document.querySelector('button')
+    button?.setAttribute('disabled', 'disabled')
   }
+
+  useEffect(() => {
+    const button = document.querySelector('button')
+    button?.removeAttribute('disabled')
+  }, [result])
 
   return (
     <div className="App">
@@ -19,13 +27,16 @@ function App() {
       </header>
       <main>
         <div className="input-wrapper">
-          <input type="text" id='inputWord' onChange={e => setWord(e.target.value)}/>
-          <label htmlFor="inputWord">Type your Word Here...</label>
+          <input type="text" id='inputWord' placeholder='Type your word here...' onChange={e => setWord(e.target.value)}/>
           <button onClick={getApiResult}><IoMdSend /></button>
         </div>
         <div className="output-wrapper">
+          <WordCard result={result} />
         </div>
       </main>
+      <footer>
+        <p>Made by <a target="_blank" href="https://github.com/davitostes">Davi Tostes</a></p>
+      </footer>
     </div>
   )
 }

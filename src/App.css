@@ -6,18 +6,27 @@
   box-sizing: border-box;
   font-family: 'Roboto', sans-serif;
 }
+
 header {
-  margin: 20px 20%;
+  width: 100%;
 }
 
 header h1 {
-
   color: #e76f51;
   font-size: 48px;
+
+  margin: 5px 20%;
 }
 
 main {
-  margin: 70px 20%;
+  width: 100%;
+  margin-top: 70px;
+}
+
+.input-wrapper {
+  width: 60%;
+
+  margin-left: 20%;
 }
 
 .input-wrapper input {
@@ -34,25 +43,11 @@ main {
   outline: none;
 }
 
-.input-wrapper input:focus + label {
-  filter: opacity(0);
-}
-
-.input-wrapper label {
-  position: absolute;
-  top: 16.7%;
-  left: 20.5%;
-  filter: opacity(0.4);
-}
-
-.input-wrapper label:hover {
-  cursor: text;
-}
-
 .input-wrapper button {
   padding: 15px;
   border: none;
   border-radius: 50%;
+  margin-left: 10px;
 
   background-color: #e76f51;
   color: aliceblue;
@@ -66,4 +61,18 @@ main {
 
 .input-wrapper button:active {
   filter: brightness(0.6);
+}
+
+.output-wrapper {
+  width: 60%;
+  margin: 30px 20%;
+}
+
+footer {
+  width: 100%;
+  position: absolute;
+  top: 98%;
+
+  display: flex;
+  justify-content: center;
 }
