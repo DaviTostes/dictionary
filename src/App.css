@@ -39,6 +39,18 @@ main {
   background-color: aliceblue;
 }
 
+@media only screen and (max-width: 896px) {
+  .input-wrapper {
+    width: 100%;
+
+    margin-left: 15%;
+  }
+
+  .input-wrapper input {
+    width: 75%;
+  }
+}
+
 .input-wrapper input:focus {
   outline: none;
 }
@@ -68,11 +80,8 @@ main {
   margin: 30px 20%;
 }
 
-footer {
-  width: 100%;
-  position: absolute;
-  top: 98%;
-
-  display: flex;
-  justify-content: center;
+@media only screen and (max-width: 896) {
+  .output-wrapper {
+    width: 90%;
+  }
 }

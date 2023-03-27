@@ -34,9 +34,6 @@ function App() {
           <WordCard result={result} />
         </div>
       </main>
-      <footer>
-        <p>Made by <a target="_blank" href="https://github.com/davitostes">Davi Tostes</a></p>
-      </footer>
     </div>
   )
 }
